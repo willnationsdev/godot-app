@@ -9,19 +9,35 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
-"class": "App",
+"base": "ConfirmationDialog",
+"class": "DeviceInput",
 "language": "GDScript",
-"path": "res://app_systems/app.gd"
+"path": "res://input_mapping/device_input.gd"
+}, {
+"base": "Tree",
+"class": "InputTree",
+"language": "GDScript",
+"path": "res://input_mapping/input_tree.gd"
+}, {
+"base": "ConfirmationDialog",
+"class": "PressAKey",
+"language": "GDScript",
+"path": "res://input_mapping/press_a_key.gd"
 } ]
 _global_script_class_icons={
-"App": ""
+"DeviceInput": "",
+"InputTree": "",
+"PressAKey": ""
 }
 
 [application]
 
-config/name="vscode-template"
+config/name="godot_editor_template"
 config/icon="res://icon.png"
+
+[autoload]
+
+App="*res://editor/app.gd"
 
 [rendering]
 
